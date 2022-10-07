@@ -1,3 +1,3 @@
-# Inżynieria Internetu - projekt zaliczniowy </br>Based on [SFML](https://www.sfml-dev.org/)
+# Inżynieria Internetu - projekt zaliczniowy
 ## Jarosław Fąfara & Filip Rostkowski
 ---
