@@ -1,0 +1,32 @@
+.btn {
+    width: 100%;
+    border: 3px solid black;
+    border-radius: 25px;
+    background: none;
+    aspect-ratio: 1 / 1;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    padding: .5rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: black;
+}
+
+.btn.active {
+    background-color: hsl(200, 100%, 50%);
+    color: white;
+    transition: all .1s ease-out;
+}
+
+.btn.inactive {
+    background-color: hsl(360, 100%, 50%);
+    color: white;
+    opacity: .3;
+    transition: all .2s ease-out;
+}
+
+.btn:hover:not(:disabled),
+.btn:focus:not(:disabled) {
+    background-color: hsl(200, 100%, 75%);
+    transition: all .1s ease-out;
+}

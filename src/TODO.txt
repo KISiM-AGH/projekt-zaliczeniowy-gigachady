@@ -1,0 +1,10 @@
+
+-jakiś efekt graficzny ruchomy
+-zmiana koloru przycisków na czerwony przy złym trafieniu ✅
+- background Filip
+- animacja spadania wisielca po kliknięciu
+
+
+//passy do bazy
+login: jfafara2
+hasło: AvS52hnm9LGH8UJR
