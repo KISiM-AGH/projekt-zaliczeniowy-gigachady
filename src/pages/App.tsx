@@ -1,12 +1,14 @@
 import React from 'react';
 import './App.css';
 import { useCallback, useEffect, useState } from "react"
-import { HangmanDrawing } from "../Componets/Hangman/HangmanDrawing"
-import { HangmanWord } from "../Componets/Hangman/HangmanWord"
-import { Keyboard } from "../Componets/Keyboard/Keyboard"
+import { HangmanDrawing } from "../componets/Hangman/HangmanDrawing"
+import { HangmanWord } from "../componets/Hangman/HangmanWord"
+import { Keyboard } from "../componets/Keyboard/Keyboard"
 import words from "../wordList.json"
-import CounterIncorrect from "../Componets/CounterIncorrect";
-import GameTimer from "../Componets/GameTimer";
+import CounterIncorrect from "../componets/CounterIncorrect";
+import GameTimer, {time} from "../componets/GameTimer";
+import WordHandler from "../componets/WordHandler";
+import NewRecord from "../componets/NewRecord";
 
 export let incorrectCount = 6
 export let gameID= 0
@@ -30,14 +32,14 @@ function App() {
     const incorrectLetters = guessedLetters.filter(
         letter => !wordToGuess.includes(letter)
     )
-    const status = false
     isLoser = incorrectLetters.length >= 6
     isWinner = wordToGuess
         .split("")
-        .every(letter => guessedLetters.includes(letter))
+        .every((letter:string) => guessedLetters.includes(letter))
 
     incorrectCount = incorrectLetters.length
-
+    const gameOver:boolean = (isWinner || isLoser)
+    if(gameOver) NewRecord(wordToGuess, time, incorrectCount)
 
     const addGuessedLetter = useCallback(
 
@@ -57,7 +59,6 @@ function App() {
         const handler = (e: KeyboardEvent) => {
             const key = e.key
             if (!key.match(/^[a-z]$/)) return
-
             e.preventDefault()
             addGuessedLetter(key)
         }

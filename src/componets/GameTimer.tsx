@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 import {gameID, isWinner, isLoser} from "../pages/App";
 
+export let time = 0
 
 const GameTimer = () => {
     const [seconds, setSeconds] = useState(0);
@@ -16,7 +17,7 @@ const GameTimer = () => {
 
     useEffect(() => {
 
-        const timerId = setInterval(() => {if(!isWinner && !isLoser)setSeconds(seconds + 1)}, 1000);
+        const timerId = setInterval(() => {if(!isWinner && !isLoser){setSeconds(seconds + 1)};time=seconds+1}, 1000);
         return () => clearInterval(timerId);
     });
 
@@ -30,8 +31,8 @@ const GameTimer = () => {
         fontWeight: "bold",
         textTransform: "uppercase",
         fontFamily: "monospace",}}>Czas gry:
-            {minutesToDisplay}{" "}
-            minut,{" "}
+            {minutesToDisplay > 0 && " " + minutesToDisplay + " minut, "}
+            {" "}
             {secondsToDisplay}{" "}
             sekund</div>
     )

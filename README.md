@@ -1,7 +1,7 @@
 # Projekt zaliczeniowy - Inżynieria Internetu
 
 Autorzy:
-    Jarosław Fąfara
+    Jarosław Fąfara,
     Filip Rostkowski
 
 ## Wisielec
