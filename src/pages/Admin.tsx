@@ -2,7 +2,7 @@ import React from "react";
 import "./Admin.css"
 import WordTable from "../componets/WordTable";
 import GameStatsTable from "../componets/GameStatsTable";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import AddWord from "../componets/AddWord";
 
 const Admin = () => {

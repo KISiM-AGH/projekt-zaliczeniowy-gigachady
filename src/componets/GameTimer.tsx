@@ -6,10 +6,9 @@ export let time = 0
 const GameTimer = () => {
     const [seconds, setSeconds] = useState(0);
     const [gameIDT, setGameID] = useState(0);
-    //if(gameIDT!=gameID) setSeconds(0)
 
     useEffect(() => {
-        if(gameIDT!=gameID) return () => {
+        if(gameIDT!==gameID) return () => {
             setSeconds(0);
             setGameID(gameID);
         }

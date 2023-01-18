@@ -1,5 +1,4 @@
-import React, {useRef, useState} from "react";
-import WordTable from "./WordTable";
+import React from "react";
 
 const AddWord = () => {
     function Add(word:string) {

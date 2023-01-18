@@ -47,8 +47,8 @@ function WordHandler(){
         </ul>
 
     )*/
-    return(arr)
-    //return(arrjson)
+    //return(arr)
+    return(arrjson)
     //return (result)
 }
 

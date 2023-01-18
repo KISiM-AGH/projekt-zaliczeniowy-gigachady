@@ -7,8 +7,8 @@ import { Keyboard } from "../componets/Keyboard/Keyboard"
 import words from "../wordList.json"
 import CounterIncorrect from "../componets/CounterIncorrect";
 import GameTimer, {time} from "../componets/GameTimer";
-import WordHandler from "../componets/WordHandler";
 import NewRecord from "../componets/NewRecord";
+import WordHandler from "../componets/WordHandler";
 
 export let incorrectCount = 6
 export let gameID= 0

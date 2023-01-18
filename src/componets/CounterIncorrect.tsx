@@ -1,4 +1,4 @@
-import {getIncorrect, incorrectCount} from "../pages/App";
+import {incorrectCount} from "../pages/App";
 
 const CounterIncorrect = () =>{
     const counter = 6-incorrectCount;
